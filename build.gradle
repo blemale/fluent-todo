@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+version = '1.0'
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'net.code-story:http:2.97'
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'org.slf4j:slf4j-simple:1.7.12'
+    testCompile 'junit:junit:4.11'
+    testCompile 'net.code-story:fluent-rest-test:1.4'
+    testCompile 'org.assertj:assertj-core:3.0.0'
+}
